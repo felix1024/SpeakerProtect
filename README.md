@@ -23,7 +23,7 @@ D5 signals standby and error condition by blink codes. While standby D6 lights d
 
 - one short = Error: overcurrent
 - two short = Error: DC detect
-- three short = Errpr: Overtemperature
+- three short = Error: Overtemperature
 
 ### Remote LED
 If not using on board LED, one can assemble 2 or 3 PIN 2.54mm headers to connect remote LEDs. With new display option even a single bicolor LED (red/green) can be used.
