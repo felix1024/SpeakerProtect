@@ -1,3 +1,4 @@
+// Speaker Protects 1.0
 const int ledSpkr = PA0; // Output 1 = LED on
 const int ledOT = PA1; // Output 1 = LED on
 const int ledDC = PA2; // Output 1 = LED on
