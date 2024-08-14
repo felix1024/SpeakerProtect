@@ -36,4 +36,3 @@ On alternate display option only 2 LEDs are required which can also be a bicolor
 
 #### Linear Powersupply
 A additional optocoupler can be used if no SMPS with powerd good signal is in use. See schematic for details.
-
