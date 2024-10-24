@@ -7,11 +7,11 @@ The hardware uses low Rdson MOSFET to form a solid state relay for fast switchin
 
 ### Function
 The system was developed to work with SMPS that provides a power good signal and a standby DC output of 8-15 Volt/100mA. Alternate linear PSU is also possible, see below.
-When Power On/Good signal detected then LED D6 starts blinking for 5 seconds and then turns speaker and D6 on.
+When Power On/Good signal detected then LED D6 starts flashes for 5 seconds and then turns speaker and D6 on.
 
-The firmware continously monitors current, temperature and DC level over interface logic. On any malfunction it switches speaker outputs off and signals error condition by LED. The overtemperature sensor must be some kind of bimetal switch. 
+The firmware continously monitors amp AC current, temperature and DC level over interface logic. On any malfunction it switches speaker outputs immediately off and signals error condition by LED. The overtemperature sensor can be some kind of bimetal switch. (open contact on high temperature) Preferably mounted on amp heatsink.
 
-To reset error condition a powercycle is required.
+To reset the error condition a powercycle is required.
 
 ### Release Notes
 Version 1.0 introduces several new functions and uses a new PCB board
@@ -19,11 +19,11 @@ Version 1.0 introduces several new functions and uses a new PCB board
 ### New Display option
 Instead of different LED for each error condition, by setting JP1 a 2 LED signaling option may be selected. LED D6 does not change. LED D2 and D3 are not used anymore.
 
-D5 signals standby and error condition by blink codes. While standby D6 lights dimmed. Off if everything well. On error it blinks first 1sec. on, 1sec off, then one, two or three times short blinks. 
+D5 signals standby and error condition by flash codes. While standby D6 lights continuosly dimmed. It goes off while no errer is detected. On any error it flashes 1sec. on, 1sec off, then one, two or three times short flashes. 
 
-- one short = Error: overcurrent
-- two short = Error: DC detect
-- three short = Error: Overtemperature
+- one short flash = Error: overcurrent
+- two short flashes = Error: DC detect
+- three short flashes = Error: Overtemperature 
 
 ### Remote LED
 If not using on board LED, one can assemble 2 or 3 PIN 2.54mm headers to connect remote LEDs. With new display option even a single bicolor LED (red/green) can be used.
